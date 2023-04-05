@@ -1,9 +1,9 @@
 import './App.css';
 import { 
-  home,
-  activities,
-  myRoutines,
-  routines
+  Home,
+  Activities,
+  MyRoutines,
+  Routines
 } from './components'
 
 const App = () => {
