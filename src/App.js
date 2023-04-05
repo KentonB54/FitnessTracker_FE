@@ -2,9 +2,7 @@ import './App.css';
 import { 
   home,
   activities,
-  login,
   myRoutines,
-  register,
   routines
 } from './components'
 

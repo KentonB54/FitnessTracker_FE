@@ -1,9 +1,9 @@
 import React from 'react'
 
-const myRoutines = () => {
+const MyRoutines = () => {
   return (
     <div>myRoutines</div>
   )
 }
 
-export default myRoutines
+export default MyRoutines

@@ -1,15 +1,11 @@
-import home from './home'
-import activities from './activities'
-import login from './login'
-import myRoutines from './myRoutines'
-import routines from './routines'
-import register from './register'
+import Home from './home'
+import Activities from './activities'
+import MyRoutines from './myRoutines'
+import Routines from './routines'
 
 export {
-    home,
-    activities,
-    login,
-    myRoutines,
-    register,
-    routines
+    Home,
+    Activities,
+    MyRoutines,
+    Routines
 }

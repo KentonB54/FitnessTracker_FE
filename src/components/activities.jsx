@@ -1,9 +1,9 @@
 import React from 'react'
 
-const activities = () => {
+const Activities = () => {
   return (
     <div>activities</div>
   )
 }
 
-export default activities
+export default Activities
