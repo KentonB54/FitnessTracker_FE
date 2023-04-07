@@ -1,22 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
-const Login = () => {
-    return (
-      <div>login</div>
-    )
-  }
+const Header = (props) => {
+const {loggedIn, setLoggedIn} = props
 
-const Register = () => {
-    return (
-      <div>register</div>
-    )
-  }
+    const handleLogout = () => {
+        localStorage.clear()
+        setLoggedIn(false)
+    }
 
-
-const Header = () => {
   return (
-    <div>header</div>
+    <div className='header--container'>
+       {!loggedIn ? '' : <h1 onClick={handleLogout} ><Link to='/'>Logout</Link></h1> }
+        <h1><Link to='/Login'>Login</Link></h1>
+        <h1><Link to='/Register'>Register</Link></h1>
+    </div>
   )
 }
 

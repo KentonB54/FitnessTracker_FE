@@ -3,3 +3,82 @@
   margin: 0;
   padding: 0;
 }
+
+
+
+/*PAGE AND ROUTES*/
+.page--container {
+  display: flex;
+}
+
+.route--container {
+  margin: auto;
+  margin-top: 10vh;
+}
+
+
+
+/*HEADER*/
+.header--container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 20px;
+  gap: 20px;
+}
+
+.header--container 
+a:link, 
+.header--container 
+a:visited,
+.header--container 
+a:active {
+  text-decoration: none;
+  color: rgb(3, 129, 13);
+}
+
+.header--container 
+a:hover {
+  text-shadow: 1px 1px 2px rgb(35, 108, 103), 0 0 1em rgb(118, 118, 118), 0 0 0.2em rgb(255, 234, 195);
+}
+
+
+
+/*ASIDE*/
+.aside--container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 50vh;
+  margin-left: 10px;
+}
+.aside--links {
+
+}
+.aside--container 
+a:link, 
+.aside--container 
+a:visited,
+.aside--container 
+a:active {
+  text-decoration: none;
+  color: rgb(170, 117, 4);
+}
+
+.aside--container 
+a:hover {
+  text-shadow: 1px 1px 2px rgb(35, 108, 103), 0 0 1em rgb(118, 118, 118), 0 0 0.2em rgb(255, 234, 195);
+}
+
+
+/*ROUTINES*/
+.routines--container {
+  border: 2px solid black;
+  margin: 20px;
+  background-color: azure;
+}
+
+.routine--titles {
+  font-size: 20px;
+  color: rgb(197, 100, 3);
+}
