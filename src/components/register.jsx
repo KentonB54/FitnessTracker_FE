@@ -1,20 +1,29 @@
 import React, { useState } from 'react'
-import { registerUser } from '../api'
+import { attachSingleATR, registerUser } from '../api'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
+  const navigate = useNavigate()
     const [ username, setUsername ] = useState("")
     const [ password, setPassword ] = useState("")
 
   const handleRegister = async (e) => {  
             e.preventDefault()
+            if (password.length <= 8) {
+              alert('password must be at least 8 characters')
+            }
             const result = await registerUser(username, password)
             console.log(result)
+            if (result.token) {
+              alert('successfully Registered!')
+              navigate('/Login')
+            }
     }
+    
 
-
-  return (
-    <form onSubmit={handleRegister}>
-        <h2>Register a new user here!</h2>
+    return (
+      <form onSubmit={handleRegister} className='register--container'>
+        <h2>Register here!</h2>
         <input 
         placeholder='Username'
         type='text'
@@ -23,7 +32,7 @@ const Register = () => {
         />
         <input 
         placeholder='Password'
-        type='text'
+        type='password'
         value={password}
         onChange={e => setPassword(e.target.value)}
         />

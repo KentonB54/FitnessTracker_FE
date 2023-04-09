@@ -1,20 +1,28 @@
 import React, { useState } from 'react'
 import { loginUser } from '../api'
+import { useNavigate } from 'react-router-dom'
 
 const Login = (props) => {
-    const {setLoggedIn} = props
+    const {setLoggedIn, setLoggedInUser} = props
+    const navigate = useNavigate()
     const [ username, setUsername ] = useState("")
     const [ password, setPassword ] = useState("")
 
   const handleLogin = async (e) => {  
             e.preventDefault()
             const result = await loginUser(username, password)
+            if(result.token) {
             setLoggedIn(true)
+            setLoggedInUser(username)
+            navigate('/')
             console.log(result)
+            } else {
+              alert('incorrect credentials')
+            }
     }
 
   return (
-    <form onSubmit={handleLogin}>
+    <form onSubmit={handleLogin} className='login--container'>
         <h2>Login here!</h2>
         <input 
         placeholder='Username'
@@ -24,7 +32,7 @@ const Login = (props) => {
         />
         <input 
         placeholder='Password'
-        type='text'
+        type='password'
         value={password}
         onChange={e => setPassword(e.target.value)}
         />
