@@ -14,7 +14,7 @@ const Login = (props) => {
             if(result.token) {
             setLoggedIn(true)
             setLoggedInUser(username)
-            navigate('/')
+            navigate('/MyRoutines')
             console.log(result)
             } else {
               alert('incorrect credentials')

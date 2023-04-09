@@ -50,7 +50,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-height: 50vh;
+  max-height: 25vh;
+  min-height: 25vh;
   margin-left: 10px;
 }
 .aside--links {
@@ -73,6 +74,11 @@ a:hover {
 
 
 /*ROUTINES*/
+
+.myRoutines--title {
+  display: flex;
+  justify-content: space-between;
+}
 .routines--container {
   display: flex;
   flex-direction: column;
@@ -153,4 +159,17 @@ max-width: 50vh;
 
 .user {
   margin-right: auto;
+}
+
+/*POST ROUTINE*/
+
+.postRoutine--container {
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+}
+
+.checkbox--routine{
+  display: flex;
+  gap: 10px
 }

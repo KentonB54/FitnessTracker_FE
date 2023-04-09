@@ -27,16 +27,16 @@ const Routines = () => {
           <div>
             <span className='routine--titles'>GOAL:</span> {pr.goal}
           </div>
+
           <button
             className='activities--button'
-            onClick={() =>
-              setSelectedRoutine(
-                selectedRoutine === pr.id ? null : pr.id
-              )
-            }
-          >
+            onClick={() => setSelectedRoutine(
+                           selectedRoutine === pr.id ? null : pr.id
+                    )
+            }>
             {selectedRoutine === pr.id ? 'Hide activities' : 'Show activities'}
           </button>
+
           {selectedRoutine === pr.id && (
             <div className='attachedActivities--container'>
               {pr.activities.map((activity) => (

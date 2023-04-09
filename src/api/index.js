@@ -67,10 +67,10 @@ export const getUser = async () => {
 }
 
 // /users/:username/routines
-export const getUsersRoutines = async () => {
+export const getUsersRoutines = async (username) => {
     try {
         const response = await fetch(
-        `${APILINK}/users/albert/routines`, {
+        `${APILINK}/users/${username}/routines`, {
             headers: {
             'Content-Type': 'application/json',
             'Authorization': `Bearer ${token}`

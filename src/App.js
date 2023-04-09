@@ -10,7 +10,8 @@ import {
   Header,
   Login,
   Register,
-  Aside
+  Aside,
+  PostRoutine
 } from './components'
 
 const App = () => {
@@ -27,9 +28,10 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />}/>
           <Route path='/Activities' element={<Activities />}/>
-          <Route path='/MyRoutines' element={<MyRoutines />}/>
+          <Route path='/MyRoutines' element={<MyRoutines loggedInUser={loggedInUser} loggedIn={loggedIn}/>}/>
           <Route path='/Routines' element={<Routines />}/>
           <Route path='/Register' element={<Register />}/>
+          <Route path='/PostRoutine' element={<PostRoutine loggedIn={loggedIn} loggedInUser={loggedInUser}/>}/>
           <Route path='/Login' element={<Login setLoggedIn={setLoggedIn} setLoggedInUser={setLoggedInUser}/>}/>
         </Routes>
           </div>
