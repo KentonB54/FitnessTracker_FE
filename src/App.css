@@ -97,7 +97,7 @@ a:hover {
 .activities--button{
   font-weight: bolder;
   border: none;
-  color: rgba(4, 243, 60, 0.808);
+  color: rgba(0, 103, 24, 0.808);
   width: 40%;
   margin-left: auto;
   background-color: rgba(255, 236, 126, 0.907);
@@ -107,7 +107,7 @@ a:hover {
 }
 
 .activities--button:hover{
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0.395);
 }
 
 .attachedActivities--container{
@@ -172,4 +172,11 @@ max-width: 50vh;
 .checkbox--routine{
   display: flex;
   gap: 10px
+}
+
+/*NEW ACTIVITY*/
+.newActivity--container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }

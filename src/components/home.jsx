@@ -2,11 +2,10 @@ import React from 'react'
 
 const Home = () => {
 
-  const imageURL = "https://s.abcnews.com/images/International/gy_putin_dc_011718_2x3_992.jpg"
+  const imageURL = "https://www.downgraf.com/wp-content/uploads/2020/09/gym-and-fitness-logo-designs-770x578.jpg"
   return (
     <div>
-      <h2>Добро пожаловать в ваше фитнес-путешествие</h2>
-      <img src={imageURL}></img>
+      <img src={imageURL} alt="workout"></img>
     </div>
 
   )

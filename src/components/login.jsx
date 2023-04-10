@@ -3,7 +3,7 @@ import { loginUser } from '../api'
 import { useNavigate } from 'react-router-dom'
 
 const Login = (props) => {
-    const {setLoggedIn, setLoggedInUser} = props
+    const {setLoggedIn, setLoggedInUser, setUserId} = props
     const navigate = useNavigate()
     const [ username, setUsername ] = useState("")
     const [ password, setPassword ] = useState("")
@@ -14,13 +14,14 @@ const Login = (props) => {
             if(result.token) {
             setLoggedIn(true)
             setLoggedInUser(username)
+            setUserId(result.user.id)
             navigate('/MyRoutines')
             console.log(result)
             } else {
               alert('incorrect credentials')
             }
     }
-
+    
   return (
     <form onSubmit={handleLogin} className='login--container'>
         <h2>Login here!</h2>

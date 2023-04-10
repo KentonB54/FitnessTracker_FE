@@ -6,12 +6,14 @@ const Header = (props) => {
 const {
   loggedIn, 
   setLoggedIn,
-  loggedInUser
+  loggedInUser,
+  setLoggedInUser
 } = props
-
+console.log(loggedInUser)
     const handleLogout = () => {
         localStorage.clear()
         setLoggedIn(false)
+        setLoggedInUser('')
     }
 
   return (

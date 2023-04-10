@@ -114,7 +114,7 @@ export const createRoutine = async (name, goal, isPublic) => {
           body: JSON.stringify({
             name,
             goal,
-            isPublic 
+            isPublic
           })
         });
         const result = await response.json();
@@ -220,6 +220,7 @@ export const createActivity = async (name, description) => {
           method: "POST",
           headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`
           },
           body: JSON.stringify({
             name,
@@ -305,6 +306,7 @@ export const deleteRA = async (routineActivityId) => {
     try {
         const response = await fetch(
         `${APILINK}/routine_activities/${routineActivityId}`, {
+          method: "DELETE",
           headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`

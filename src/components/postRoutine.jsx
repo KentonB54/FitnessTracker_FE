@@ -3,7 +3,7 @@ import { createRoutine } from "../api";
 import { useNavigate } from "react-router-dom";
 
 const PostRoutine = (props) => {
-    const {loggedIn} = props
+    const {loggedIn, loggedInUser} = props
     const [name, setName] = useState('')
     const [goal, setGoal] = useState('')
     const [isPublic, setIsPublic] = useState(false)
@@ -18,10 +18,11 @@ const PostRoutine = (props) => {
         const result = await createRoutine(
             name,
             goal,
-            isPublic ? true : false
+            isPublic ? true : false,
         )
         console.log(result)
-        navigate('/MyRoutines')
+        console.log(loggedInUser)
+         navigate('/MyRoutines')
     }
 
     useEffect(() => {

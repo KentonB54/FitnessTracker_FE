@@ -9,7 +9,7 @@ const Register = () => {
 
   const handleRegister = async (e) => {  
             e.preventDefault()
-            if (password.length <= 8) {
+            if (password.length < 8) {
               alert('password must be at least 8 characters')
             }
             const result = await registerUser(username, password)

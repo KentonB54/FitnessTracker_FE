@@ -7,6 +7,8 @@ import Login from './login'
 import Register from './register'
 import Aside from './aside'
 import PostRoutine from './postRoutine'
+import AddActivity from './addActivity'
+import PostActivity from './postActivity'
 
 export {
     Home,
@@ -17,5 +19,7 @@ export {
     Login,
     Register,
     Aside,
-    PostRoutine
+    PostRoutine,
+    AddActivity,
+    PostActivity
 }
